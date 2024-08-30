@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinícius Morais.Uninter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com a logo e links para as seções -->
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#sobre-mim" onclick="mostrarAba('sobre-mim')">Sobre Mim</a>
+            <a href="#formacao" onclick="mostrarAba('formacao')">Formação</a>
+            <a href="#portfolio" onclick="mostrarAba('portfolio')">Portfólio</a>
+            <a href="#contato" onclick="mostrarAba('contato')">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Sobre mim -->
+    <section id="sobre-mim" class="active">
+        <h1>Sobre Mim</h1>
+        <p>Olá, meu nome é Vinícius, tenho 26 anos. Sou designer digital e estou amando aprender mais sobre html e CSS. Meus hobbies favoritos são jogar videogame e praticar exercícios físicos.</p>
+    </section>
+
+    <!-- Formação -->
+    <section id="formacao">
+        <h1>Formação</h1>
+        <p>Atualmente, estou cursando ADS - Análise e Desenvolvimento de Sistemas, na Uninter. Falo apenas português. </p>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio">
+        <h1>Meu Portfólio</h1>
+        <p>Página em Desenvolvimento!</p>
+       
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h1>Contato</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        Vinícius Morais, Uninter 2024
+    </footer>
+
+    <!-- Script para alternar entre as abas -->
+    <script>
+        function mostrarAba(abaId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            
+            document.getElementById(abaId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
